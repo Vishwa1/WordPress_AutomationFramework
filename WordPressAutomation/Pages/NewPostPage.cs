@@ -9,7 +9,7 @@ namespace WordPressAutomation
 
         public static void GoTo()
         {
-           //Refactor: General Menu Navigation
+            //Refactor: General Menu Navigation
             LeftNavigation.Posts.AddNew.Select();
         }
 
@@ -23,7 +23,7 @@ namespace WordPressAutomation
             var message = Driver.Instance.FindElement(By.Id("message"));
             var newPostLink = message.FindElements(By.TagName("a"))[0];
             newPostLink.Click();
-           
+
         }
 
         public static bool IsInEditMode()
@@ -32,7 +32,7 @@ namespace WordPressAutomation
             return Driver.Instance.FindElement(By.TagName("h2")) != null;
         }
 
-        public static string Title 
+        public static string Title
         {
             get
             {
@@ -42,16 +42,16 @@ namespace WordPressAutomation
                 //otherwise you cant retrieve the text
                 return string.Empty;
             }
-        
+
         }
     }
 
     public class CreatePostCommand
-    { 
+    {
         private string title;
         private string body;
 
-        public CreatePostCommand (string title)
+        public CreatePostCommand(string title)
         {
             this.title = title;
         }

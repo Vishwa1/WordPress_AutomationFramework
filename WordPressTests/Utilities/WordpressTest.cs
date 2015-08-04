@@ -18,7 +18,5 @@ namespace WordPressTests
         {
             Driver.Close();
         } 
-
-
     }
 }
